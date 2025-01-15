@@ -794,9 +794,16 @@ body.dark .work-links img {
   font-size: initial;
 }
 
+.article-img {
+  display: block; /* Ensures the image is treated as a block element */
+  width: 100%; /* Ensures it takes up full width of its container */
+  height: auto; /* Maintains aspect ratio */
+  margin-top: var(--gutter-small); /* Adds space above the image */
+}
+
 @media (max-width: 985px) {
   .article-boxes {
-    max-inline-size: 685px;
+    width: 100%; /* Ensure proper width on small screens */
     margin-inline: auto;
     justify-content: center;
     gap: 4%;
@@ -804,7 +811,7 @@ body.dark .work-links img {
 
   .article-box:nth-of-type(2),
   .article-box:nth-of-type(3) {
-    flex-basis: 48%;
+    flex-basis: 48%; /* Make these boxes 48% of the container width */
   }
 
   .article-box:last-child {
@@ -816,7 +823,7 @@ body.dark .work-links img {
   .article-box:nth-child(2),
   .article-box:nth-child(3),
   .article-box:last-child {
-    flex-basis: 100%;
+    flex-basis: 100%; /* Make all boxes full-width */
   }
 
   .featured-article {
@@ -831,6 +838,7 @@ body.dark .work-links img {
     display: block;
   }
 }
+
 
 /* --------------------------------- */
 /* ----- Featured article -----*/
